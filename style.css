@@ -8,12 +8,12 @@
 }
 
 body{
-    background:#F8F8FC;
+    background:#000000;
     font-family:'Poppins',sans-serif;
     color:#555;
 }
 h1{
-    color:#5e008a;
+    color:#ffffff;
     font-size:50px;
     text-align:center;
 }
@@ -348,9 +348,9 @@ input[type="time"]{
     margin:40px auto;
     width:90%;
     border-radius:25px;
-    border:3px solid #28282e;
-    border-bottom:8px solid #28282e;
-    background:#dbdbdb3a;
+    border:3px solid #ffffff;
+    border-bottom:8px solid #ffffff;
+    background:#ffffffa8;
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
     gap:25px;

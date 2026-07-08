@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="img/png" href="./img/tarea-completada.png">
+</head>
+<body>
+    <header>
+        <h1> 💗 TO DO</h1>
+    </header>
+    <section class="accion">
+        <button id="btnAgregar">Agregar</button>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <h2>Agregar Tarea</h2>
+            <form class="task-form">
+
+    <!-- Encabezado -->
+    <div class="form-header">
+        <h2>✨ Nueva tarea</h2>
+        <p>Organiza tus actividades de una forma sencilla.</p>
+    </div>
+
+    <!-- Información -->
+    <section class="form-section">
+        <h3>📝 Información</h3>
+
+        <div class="input-group">
+            <label for="titulo">Título de la tarea</label>
+            <input type="text" id="titulo" placeholder="Ej. Terminar proyecto de programación" required>
+        </div>
+
+        <div class="input-group">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="4" placeholder="Describe los detalles de la tarea..."></textarea>
+        </div>
+    </section>
+
+    <!-- Organización -->
+    <section class="form-section">
+
+        <h3>📂 Organización</h3>
+
+        <div class="row">
+
+            <div class="input-group">
+                <label>Categoría</label>
+                <select>
+                    <option>Escuela</option>
+                    <option>Trabajo</option>
+                    <option>Personal</option>
+                    <option>Hogar</option>
+                    <option>Salud</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Prioridad</label>
+                <select>
+                    <option>🟢 Baja</option>
+                    <option selected>🟡 Media</option>
+                    <option>🔴 Alta</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="input-group">
+            <label>Estado</label>
+            <select>
+                <option selected>Pendiente</option>
+                <option>En progreso</option>
+                <option>Finalizada</option>
+            </select>
+        </div>
+
+    </section>
+
+    <!-- Fecha -->
+    <section class="form-section">
+
+        <h3>📅 Fecha y hora</h3>
+
+        <div class="row">
+
+            <div class="input-group">
+                <label>Fecha límite</label>
+                <input type="date">
+            </div>
+
+            <div class="input-group">
+                <label>Hora</label>
+                <input type="time">
+            </div>
+
+        </div>
+
+        <div class="input-group">
+            <label>Recordatorio</label>
+            <select>
+                <option>Ninguno</option>
+                <option>10 minutos antes</option>
+                <option>30 minutos antes</option>
+                <option>1 hora antes</option>
+                <option>1 día antes</option>
+            </select>
+        </div>
+
+    </section>
+
+    <!-- Personalización -->
+    <section class="form-section">
+
+        <h3>🎨 Personalización</h3>
+
+        <label>Color de la tarjeta</label>
+
+        <div class="selector-color">
+
+            <button type="button" class="color" data-color="#F0D9EF"></button>
+
+            <button type="button" class="color" data-color="#FCDCE1"></button>
+
+            <button type="button" class="color" data-color="#FFE6BB"></button>
+
+            <button type="button" class="color" data-color="#E9ECCE"></button>
+
+            <button type="button" class="color" data-color="#CDE9DC"></button>
+
+            <button type="button" class="color" data-color="#C4DFE5"></button>
+
+        </div>
+
+    </section>
+
+    <!-- Etiquetas -->
+    <section class="form-section">
+
+        <h3>🏷️ Etiquetas</h3>
+
+        <input type="text" placeholder="Ej. #Proyecto #Examen #Urgente">
+
+    </section>
+
+    <!-- Subtareas -->
+    <section class="form-section">
+
+        <h3>☑ Subtareas</h3>
+
+        <div class="subtask">
+            <input type="checkbox">
+            <input type="text" placeholder="Subtarea 1">
+        </div>
+
+        <div class="subtask">
+            <input type="checkbox">
+            <input type="text" placeholder="Subtarea 2">
+        </div>
+
+        <div class="subtask">
+            <input type="checkbox">
+            <input type="text" placeholder="Subtarea 3">
+        </div>
+
+        <button type="button" class="add-subtask">
+            + Agregar subtarea
+        </button>
+
+    </section>
+
+    <!-- Archivos -->
+    <section class="form-section">
+
+        <h3>📎 Archivos</h3>
+
+        <input type="file">
+
+    </section>
+
+    <!-- Botones -->
+    <div class="form-buttons">
+
+        <button type="reset" class="btn-cancelar">
+            Cancelar
+        </button>
+
+        <button type="submit" class="btn-guardar">
+            Guardar tarea
+        </button>
+
+    </div>
+
+</form>
+        </div>
+    </div>
+    <div class="tarjeta" id="tarjeta">
+
+    </div>
+</body>
+</html>

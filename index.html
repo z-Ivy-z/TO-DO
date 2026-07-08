@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,18 @@
 </head>
 <body>
     <header>
-        <h1> 💗 TO DO</h1>
+        <h1>TO DO</h1>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     </header>
 
     <section class="accion">
-        <button id="btnAgregar">Agregar</button>
+        <button class="btnAgregar" id="btnAgregar">Agregar</button>
     </section>
 
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close" id="close">&times;</span>
-            <form class="task-form">
-
+            <form class="task-form" id="taskForm">
                 <div class="form-header">
                     <h2>✨ Nueva tarea</h2>
                     <p>Organiza tu día de una forma sencilla.</p>
@@ -32,12 +31,12 @@
 
                     <div class="input-group flex2">
                         <label>Título</label>
-                        <input type="text" placeholder="¿Qué debes hacer?">
+                        <input type="text" id="titulo" placeholder="¿Qué debes hacer?">
                     </div>
 
                     <div class="input-group">
                         <label>Categoría</label>
-                        <select>
+                        <select id="categoria">
                             <option>Escuela</option>
                             <option>Trabajo</option>
                             <option>Personal</option>
@@ -49,7 +48,7 @@
     <!-- Descripción -->
                 <div class="input-group">
                     <label>Descripción</label>
-                    <textarea rows="3" placeholder="Agrega una descripción..."></textarea>
+                    <textarea id="descripcion" rows="3" placeholder="Agrega una descripción..."></textarea>
                 </div>
 
     <!-- Fila 2 -->
@@ -57,17 +56,17 @@
 
                     <div class="input-group">
                         <label>Fecha</label>
-                        <input type="date">
+                        <input type="date" id="fecha">
                     </div>
 
                     <div class="input-group">
                         <label>Hora</label>
-                        <input type="time">
+                        <input type="time" id="hora">
                     </div>
 
                     <div class="input-group">
                         <label>Prioridad</label>
-                        <select>
+                        <select id="prioridad">
                             <option>🟢 Baja</option>
                             <option>🟡 Media</option>
                             <option>🔴 Alta</option>
@@ -81,12 +80,12 @@
 
                     <div class="input-group flex2">
                         <label>Etiquetas</label>
-                        <input type="text" placeholder="#Proyecto #Escuela">
+                        <input type="text" id="etiquetas" placeholder="#Proyecto #Escuela">
                     </div>
 
                     <div class="input-group">
                         <label>Estado</label>
-                        <select>
+                        <select id="estado">
                             <option>Pendiente</option>
                             <option>En progreso</option>
                             <option>Completada</option>
@@ -128,9 +127,7 @@
             </form>
         </div>
     </div>
-    <div class="tarjeta" id="tarjeta">
-
-    </div>
+    <section class="pizarron" id="pizarron"></section>
     <script src="script.js"></script>
 </body>
 </html>

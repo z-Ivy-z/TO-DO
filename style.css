@@ -4,12 +4,32 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
 }
 
 body{
     background:#F8F8FC;
     font-family:'Poppins',sans-serif;
     color:#555;
+}
+h1{
+    color:#5e008a;
+    font-size:50px;
+    text-align:center;
+}
+.accion{
+    display: flex;
+    justify-content: center;
+}
+.btnAgregar{
+    background:#CDE9DC;
+    color:#406254;
+    border:none;
+    border-radius:15px;
+    padding:12px 24px;
+    cursor:pointer;
+    transition:.25s;
+    font-weight:600;
 }
 
             /* FORMULARIO */
@@ -323,3 +343,72 @@ input[type="time"]{
     transform:rotate(90deg);
 }
 
+/* Pizarron */
+.pizarron{
+    margin:40px auto;
+    width:90%;
+    border-radius:25px;
+    border:3px solid #28282e;
+    border-bottom:8px solid #28282e;
+    background:#dbdbdb3a;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+/* Nota */
+.nota{
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    animation:aparecer .3s;
+    transition:.3s;
+}
+
+.nota:hover{
+    transform:translateY(-6px);
+}
+
+.nota h3{
+    margin-bottom:15px;
+}
+
+.nota p{
+    margin:8px 0;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Eliminar nota */
+/* Botón eliminar */
+
+.btn-eliminar{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:15px;
+    background:#ffffff;
+    color:#5c5c5c;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.btn-eliminar:hover{
+    background:#5c5c5c;
+    color:#ffffff;
+    transform:translateY(-2px);
+}

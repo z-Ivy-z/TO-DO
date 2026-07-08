@@ -8,12 +8,25 @@
 }
 
 body{
-    background:#000000;
     font-family:'Poppins',sans-serif;
-    color:#555;
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #fffdf7;
+
+    /* Líneas de la libreta */
+    background-image:
+        linear-gradient(to right, transparent 0, transparent 60px, #ff9a9a 60px, #ff9a9a 62px, transparent 62px),
+        linear-gradient(to bottom, #d9e8ff 1px, transparent 1px);
+
+    background-size:
+        100% 100%,
+        100% 30px;
+
+    padding-left: 80px;
 }
 h1{
-    color:#ffffff;
+    color:#000000;
     font-size:50px;
     text-align:center;
 }
@@ -350,7 +363,7 @@ input[type="time"]{
     border-radius:25px;
     border:3px solid #ffffff;
     border-bottom:8px solid #ffffff;
-    background:#ffffffa8;
+    background:#c1e8ff4b;
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
     gap:25px;
@@ -408,7 +421,7 @@ input[type="time"]{
 
 
 .btn-eliminar:hover{
-    background:#5c5c5c;
-    color:#ffffff;
+    background:#ebebeb;
+    color:#5c5c5c;
     transform:translateY(-2px);
 }
